@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Game</title>
+  <style>
+    body {
+    background-image: url('pozadie_dlhe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+    .ball {
+      width: 45px;
+      height: 45px;
+      border-radius: 55px;
+      background-color: rgb(34, 101, 107);
+      top: 0;
+      left: 0;
+      display: inline-block;
+      padding: 35px 35px;
+      position: absolute;       /* Dôležité, aby sa dalo animovať "left" */
+      font-weight: bold;
+      color: white;
+    }
+    .sun{
+      width: 50px;
+      height: 50px; 
+      border-radius: 50px;
+      background-color: rgb(246, 186, 7);
+      padding: 25px 25px;
+      top: 20;
+      left: 300;
+    }
+    .over{
+      font-weight: bold;
+      color: rgb(255, 64, 30);
+      font-size: 120px;
+      padding: 180px;
+      padding-left: 400px;
+      padding-right: 400px;
+
+    }
+    hr {
+      display: block;
+      margin-top: 550px;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+      color: rgb(255, 64, 30);
+      size: 40px;
+
+}
+  .container{
+    display: flex;
+  }
+  .heart{
+    height: 50px;
+    width: 50px;
+  }
+
+  #svg{
+    position: absolute;       
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+
+
+  }
+
+  </style>
+</head>
+<body>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="logic.js"></script>
+  <div class="container">
+    <div class="sun">0</div>
+    <img class="heart" id="heart1" src="srdenko.png">
+    <img class="heart" id="heart2" src="srdenko.png">
+    <img class="heart" id="heart3" src="srdenko.png">
+</div>
+<div id="hr"><hr></div>
+</body>
+</html>

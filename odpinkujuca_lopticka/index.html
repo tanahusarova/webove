@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Game</title>
+  <style>
+    body {
+    background-image: url('pozadie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+    .ball {
+      width: 30px;
+      height: 30px;
+      border-radius: 20px;
+      background-color: rgb(198, 14, 14);
+      top: 0;
+      left: 350px;
+      display: inline-block;
+      position: absolute;       /* Dôležité, aby sa dalo animovať "left" */
+      font-weight: bold;
+      color: white;
+    }
+    .over{
+      padding: 300px;
+      padding-left: 400px;
+      padding-right: 400px;
+      font-weight: bold;
+      color: rgb(251, 164, 2);
+      font-size: 120px;
+    }
+
+  .odpinkavatko{
+    width: 100px;
+    height: 30px; 
+    margin-top: 800px;
+    display: inline-block;
+    left: 100px;
+    border-radius: 30px;
+    background-color: rgb(34, 101, 107);
+    position: relative;       /* Dôležité, aby sa dalo animovať "left" */
+
+  }
+
+  .containerheart{
+    display: inline-block;
+    position: absolute;
+
+  }
+
+  .sun{
+    width: 50px;
+    height: 50px; 
+    border-radius: 50px;
+    background-color: rgb(248, 222, 135);
+    padding: 25px 25px;
+    top: 20;
+    left: 300;
+    position: absolute;
+
+  }
+
+
+  .heart{
+    height: 50px;
+    width: 50px;
+  }
+
+  </style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script src="logic.js"></script>
+  <div class="containerheart">
+    <div class="sun">0</div>
+    <img class="heart" id="heart1" src="srdenko.png" style="margin-left: 120px;">
+    <img class="heart" id="heart2" src="srdenko.png">
+    <img class="heart" id="heart3" src="srdenko.png">
+</div>
+<div class="ball"></div>
+<div class="odpinkavatko"></div>
+<audio preload="true" id="point">
+  <source src="point.ogg"/>
+  <source src="point.mp3"/>
+</audio>
+<audio preload="true" id="lost">
+  <source src="lost.ogg"/>
+  <source src="lost.mp3"/>
+</audio>
+</body>
+</html>
